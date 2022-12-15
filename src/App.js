@@ -1,9 +1,12 @@
-import './App.css';
+import './App.scss';
+import Column from './components/Column';
 
 function App() {
   return (
-    <div className="App">
-      <h1> Hello World </h1>
+    <div className="trelloApp">
+      <nav className='navbar app' >Nav Bar</nav>
+      <nav className='navbar board'>Board Bar</nav>
+      <Column />
     </div>
   );
 }

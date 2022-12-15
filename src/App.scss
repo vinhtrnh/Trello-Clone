@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+$board-bg-color: #0079bf;
+$app-bg-color: #0067a3;
+$gap: 10px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.3em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.trelloApp {
+    height: 100vh;
+    background-color: $board-bg-color;
+    display: grid;
+    grid-template-rows: 40px 50px 1fr;
+
+    .navbar {
+        padding-left: $gap;
+        display: flex;
+        align-items: center;
+
+        &.app {
+            background-color: $app-bg-color;
+            font-size: 1.5rem;
+        }
+
+        &.board {
+            background-color: $board-bg-color;
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .board-columns {}
+}
