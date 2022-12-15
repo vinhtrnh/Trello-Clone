@@ -1,0 +1,99 @@
+$column-height: 46px;
+$column-gap: 10px;
+$column-border-radius: 8px;
+$list-bg-color: #ebecf0;
+$card-border-radius: 4px;
+
+.board-columns {
+    display: flex;
+    margin: 0 $column-gap $column-gap ;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        appearance: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, .24);
+        border: 8px solid $list-bg-color;
+    }
+
+    .column {
+        flex: 0 0 auto;
+        width: 300px;
+        height: 300px;
+        margin: 0 $column-gap;
+    }
+
+    >* {
+        background-color: $list-bg-color;
+        color: #333;
+        padding: 0 8px;
+        border-radius: $column-border-radius;
+    }
+
+    header {
+        line-height: $column-height;
+        height: $column-height;
+        padding-left: $column-gap ;
+        border-top-left-radius: $column-border-radius;
+        border-top-right-radius: $column-border-radius;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    footer {
+        line-height: $column-height;
+        height: $column-height;
+        padding-left: calc(#{$column-gap} + 5px);
+        border-bottom-left-radius: $column-border-radius;
+        border-bottom-right-radius: $column-border-radius;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        max-height: calc(100% - #{$column-height} - #{$column-height});
+        overflow-y: auto;
+        padding: 0;
+
+        &::-webkit-scrollbar {
+            appearance: none;
+        }
+
+        &::-webkit-scrollbar:vertical {
+            width: 11px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darken($list-bg-color, 15);
+            border-right: 5px solid $list-bg-color;
+        }
+
+        li {
+            background: #fff;
+            padding: $column-gap;
+            border-radius: $card-border-radius ;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+            &:not(:last-child) {
+                margin-bottom: $column-gap;
+            }
+
+            img {
+                display: block;
+                width: calc(100% + 2 * #{$column-gap});
+                margin: -$column-gap 0 $column-gap (
+                    -$column-gap
+                );
+            border-bottom-left-radius: $card-border-radius;
+            border-bottom-right-radius: $card-border-radius;
+        }
+    }
+
+}
+}
