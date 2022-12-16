@@ -1,8 +1,4 @@
-$column-height: 46px;
-$column-gap: 10px;
-$column-border-radius: 8px;
-$list-bg-color: #ebecf0;
-$card-border-radius: 4px;
+@import '_setting.scss';
 
 .board-columns {
     display: flex;
