@@ -1,12 +1,15 @@
-import './App.scss';
-import Column from './components/Column';
-
+import 'App.scss';
+import AppBar from 'components/AppBar/AppBar';
+import BoardBar from 'components/BoardBar/BoardBar';
+import BoardContent from 'components/BoardContent/BoardContent';
+import './_setting.scss';
 function App() {
   return (
     <div className="trelloApp">
-      <nav className='navbar app' >Nav Bar</nav>
-      <nav className='navbar board'>Board Bar</nav>
-      <Column />
+      <AppBar />
+      <BoardBar />
+      <BoardContent />
+
     </div>
   );
 }
