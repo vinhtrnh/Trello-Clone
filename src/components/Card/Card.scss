@@ -1,6 +1,6 @@
 @import '_setting.scss';
 
-li.task-item {
+li.cart-item {
     background: #fff;
     padding: $column-gap;
     border-radius: $card-border-radius ;
@@ -10,7 +10,7 @@ li.task-item {
         margin-bottom: $column-gap;
     }
 
-    img {
+    img.card-cover {
         display: block;
         width: calc(100% + 2 * #{$column-gap});
         margin: -$column-gap 0 $column-gap (
