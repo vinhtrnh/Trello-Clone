@@ -3,7 +3,7 @@
 .column {
     flex: 0 0 auto;
     width: 300px;
-    height: 300px;
+    height: 500px;
     margin: 0 $column-gap;
 }
 
@@ -32,7 +32,7 @@ footer {
     border-bottom-right-radius: $column-border-radius;
 }
 
-ul.task-list {
+ul.card-list {
     list-style-type: none;
     margin: 0;
     max-height: calc(100% - #{$column-height} - #{$column-height});
