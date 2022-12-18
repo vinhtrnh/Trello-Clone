@@ -1,14 +1,85 @@
 @import '_setting.scss';
 
+$columns-height: calc(#{$board-content-height} - #{$column-height * 2});
+
+
 .column {
     flex: 0 0 auto;
     width: 300px;
-    height: 500px;
     margin: 0 $column-gap;
+    // height: $columns-height;
+    >* {
+        background-color: $list-bg-color;
+        color: #333;
+        padding: 0 8px;
+        border-radius: $column-border-radius;
+    }
+
+    header.column-drag-handle {
+        line-height: $column-height;
+        height: $column-height;
+        padding-left: $column-gap ;
+        border-top-left-radius: $column-border-radius;
+        border-top-right-radius: $column-border-radius;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .column-drag-handle {
+        cursor: pointer;
+    }
+
+    footer {
+        line-height: $column-height;
+        height: $column-height;
+        padding-left: calc(#{$column-gap} + 5px);
+        border-bottom-left-radius: $column-border-radius;
+        border-bottom-right-radius: $column-border-radius;
+    }
+
+    div.card-list {
+        margin: 0;
+        max-height: calc(#{$columns-height} - #{$column-height} - #{$column-height});
+        overflow-y: auto;
+        padding: 0;
+
+        &::-webkit-scrollbar {
+            appearance: none;
+        }
+
+        &::-webkit-scrollbar:vertical {
+            width: 11px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darken($list-bg-color, 15);
+            border-right: 5px solid $list-bg-color;
+        }
+
+        .card-ghost {
+            transition: transform 0.18s ease;
+            transform: rotateZ(5deg)
+        }
+        
+        .card-ghost-drop{
+            transition: transform 0.18s ease-in-out;
+            transform: rotateZ(0deg)
+        }
+        .cards-drop-preview {
+            background-color: rgba(150, 150, 200, 0.1);
+            border: 1px dashed #abc;
+            margin: 5px 45px 5px 5px;
+          }
+    }
+}
+
+.column {
+    background-color: $list-bg-color;
+    flex: 0 0 auto;
+    border-radius: $column-gap;
 }
 
 >* {
-    background-color: $list-bg-color;
     color: #333;
     padding: 0 8px;
     border-radius: $column-border-radius;
@@ -32,7 +103,7 @@ footer {
     border-bottom-right-radius: $column-border-radius;
 }
 
-ul.card-list {
+ul {
     list-style-type: none;
     margin: 0;
     max-height: calc(100% - #{$column-height} - #{$column-height});
@@ -52,6 +123,25 @@ ul.card-list {
         border-right: 5px solid $list-bg-color;
     }
 
+    li {
+        background: #fff;
+        padding: $column-gap;
+        border-radius: $card-border-radius ;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 
+        &:not(:last-child) {
+            margin-bottom: $column-gap;
+        }
+
+        img {
+            display: block;
+            width: calc(100% + 2 * #{$column-gap});
+            margin: -$column-gap 0 $column-gap (
+                -$column-gap
+            );
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
+    }
+}
 
 }

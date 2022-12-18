@@ -1,1 +1,15 @@
 @import '_setting.scss';
+
+.navbar {
+    height: $appbar-height;
+    padding-left: $gap;
+    display: flex;
+    align-items: center;
+
+    &.app {
+        background-color: $app-bg-color;
+        font-size: 1.5rem;
+    }
+
+    
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+// global var : bg-color, gap
 $board-bg-color: #0079bf;
 $app-bg-color: #0067a3;
 $gap: 10px;
@@ -7,7 +8,12 @@ $column-gap: 10px;
 $column-border-radius: 8px;
 $list-bg-color: #ebecf0;
 $card-border-radius: 4px;
+// defined for media queries
 $screen-lg: 1201px;
 $screen-md: 992px;
 $screen-sm: 768px;
 $screen-phone: 480px;
+// screens
+$appbar-height: 4vh;
+$board-bar-height:5vh;
+$board-content-height: 91vh; 
