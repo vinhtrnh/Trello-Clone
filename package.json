@@ -6,9 +6,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "eslint": "^8.30.0",
-    "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint": "^5.12.0",
+    "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
@@ -22,8 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "eslint": "eslint src"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
