@@ -19,7 +19,21 @@
         background-color: rgba(255, 255, 255, .24);
         border: 8px solid $list-bg-color;
     }
-
+    .add-new-column {
+        width: 250px;
+        height: 32px;
+        line-height: 32px;
+        padding: 4px 0px 4px 15px;
+        cursor: pointer;
+        color: #fff;
+        margin-left: $gap;
+        font-size: 15px;
+        background-color: hsla(0, 0%, 100%, .24);
+        border-radius: $gap;
+        &:hover {
+        background-color: hsla(0, 0%, 100%, .34);
+        }
+    }
     
 .column-drop-preview {
     background-color: rgba(150, 150, 200, 0.1);

@@ -2,6 +2,7 @@
 // global var : bg-color, gap
 $board-bg-color: #0079bf;
 $app-bg-color: #0067a3;
+$app-main-color: #333;
 $gap: 10px;
 $column-height: 46px;
 $column-gap: 10px;
@@ -14,6 +15,6 @@ $screen-md: 992px;
 $screen-sm: 768px;
 $screen-phone: 480px;
 // screens
-$appbar-height: 4vh;
-$board-bar-height:5vh;
-$board-content-height: 91vh; 
+$appbar-height: 5vh;
+$board-bar-height:6vh;
+$board-content-height: 88vh; 
