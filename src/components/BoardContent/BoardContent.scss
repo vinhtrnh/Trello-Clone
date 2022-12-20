@@ -6,7 +6,10 @@
     display: flex;
     margin: 0 $column-gap $column-gap ;
     overflow-x: auto;
-
+    &::after{
+        content: '';
+        flex: 0 0 $gap
+    }
     &::-webkit-scrollbar {
         appearance: none;
     }
@@ -21,8 +24,9 @@
     }
     .add-new-column {
         width: 250px;
-        height: 32px;
-        line-height: 32px;
+        max-width: 250px;
+        
+        line-height: 40px;
         padding: 4px 0px 4px 15px;
         cursor: pointer;
         color: #fff;
@@ -32,6 +36,32 @@
         border-radius: $gap;
         &:hover {
         background-color: hsla(0, 0%, 100%, .34);
+        }
+    }
+    .enter-new-column {
+        
+        padding: 4px 10px;
+        width: 250px;
+        max-width: 250px;
+        margin-left: $gap;
+        
+        background-color: $list-bg-color;
+        border-radius: $gap;
+        .input-enter-new-column {
+            margin: 5px 0 ;
+        }
+        .cancel-new-column {
+            margin-left: $gap;
+            cursor: pointer;
+    
+            i{
+                font-size: 18px;
+                color: $alert-danger-color;
+                &:hover{
+                    color: darken($alert-danger-color, 10);
+                }
+            }
+            
         }
     }
     
