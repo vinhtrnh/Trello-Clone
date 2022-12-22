@@ -18,11 +18,52 @@ $columns-height: calc(#{$board-content-height} - #{$column-height * 2});
     header.column-drag-handle {
         line-height: $column-height;
         height: $column-height;
-        padding-left: $column-gap ;
+        padding: 5px 8px ;
         border-top-left-radius: $column-border-radius;
         border-top-right-radius: $column-border-radius;
         font-size: 16px;
         font-weight: bold;
+        display: flex;
+        .column-title  {
+            flex: 90%;
+        }
+        .column-dropdown-action {
+            flex: 10%;
+            .dropdown{
+                .dropdown-btn {
+                    background-color: $list-bg-color;
+                    border: none;
+                    padding: 0 $gap;
+                    font-size: 16px;
+                    font-weight: bold;
+                    height: 32px;
+                    margin-top: -16px;
+                    &::after{
+                        content: '...';
+                        border: none;
+                        color: $app-main-color;
+                        outline: none;
+                        letter-spacing: 1px;
+                        vertical-align: 1.255em;
+                    }
+                    &:hover {
+                        background-color: darken($list-bg-color, 10);
+                        border-color:  darken($list-bg-color, 10); 
+                    }
+                }
+            }
+            .dropdown-menu {
+                padding: 0;
+                min-width: 200px;
+            }
+            .dropdown-item {
+                padding: 0,1rem 1rem;
+                font-size: 14px;
+                &:not(:last-child) {
+                    border-bottom: 1px solid  darken($list-bg-color, 10);
+                }
+            }
+        }
     }
 
     .column-drag-handle {
