@@ -36,7 +36,8 @@ body {
     [type=tel].form-control:focus, 
     [contenteditable].form-control:focus {
     box-shadow: none;
-    //   border: 1px solid #ccc;
+      
+      border: 1px solid $input-border-color;
     }
     .btn:focus, .btn:active {
         outline: none;
@@ -52,5 +53,17 @@ body {
             background-color: #fff;
             border: 1px solid $input-border-color;
         }
+    }
+    .cancel-icon {
+        margin-left: $gap;
+            cursor: pointer;
+    
+            i{
+                font-size: 18px;
+                color: $alert-danger-color;
+                &:hover{
+                    color: darken($alert-danger-color, 10);
+                }
+            }
     }
 }
